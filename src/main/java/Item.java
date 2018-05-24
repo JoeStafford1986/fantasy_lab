@@ -8,4 +8,8 @@ public class Item {
     public int getHealthPointManipulator() {
         return this.healthPointManipulator;
     }
+
+    public void setHealthPointManipulator(int newHealthPointManipulator) {
+        this.healthPointManipulator = newHealthPointManipulator;
+    }
 }

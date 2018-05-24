@@ -15,4 +15,10 @@ public class ItemTest {
     public void hasHealthPointManipulator() {
         assertEquals(1, item.getHealthPointManipulator());
     }
+
+    @Test
+    public void canSetHealthPointManipulator() {
+        item.setHealthPointManipulator(2);
+        assertEquals(2, item.getHealthPointManipulator());
+    }
 }
