@@ -5,12 +5,14 @@ import static org.junit.Assert.assertEquals;
 
 public class FighterTest {
     Fighter fighter;
+    Spellcaster spellcaster;
     MeleeWeapon meleeWeapon;
 
     @Before
     public void before(){
         fighter = new Fighter(10);
-        meleeWeapon = new MeleeWeapon(1);
+        meleeWeapon = new MeleeWeapon(-1);
+        spellcaster = new Spellcaster(2);
     }
 
     @Test
@@ -27,5 +29,12 @@ public class FighterTest {
     public void canAddMeleeWeaponInventoryCount(){
         fighter.addMeleeWeapontoInventory(meleeWeapon);
         assertEquals(1, fighter.getMeleeWeaponInventoryCount());
+    }
+
+    @Test
+    public void canManipulateHeathPoints() {
+        fighter.addMeleeWeapontoInventory(meleeWeapon);
+        fighter.manipulateHeathPoints(spellcaster);
+        assertEquals(1, spellcaster.getHealthPoints());
     }
 }

@@ -8,11 +8,11 @@ public class MeleeWeaponTest {
 
     @Before
     public void before() {
-        meleeWeapon = new MeleeWeapon(1);
+        meleeWeapon = new MeleeWeapon(-1);
     }
 
     @Test
     public void hasHealthPointManipulator(){
-        assertEquals(1, meleeWeapon.getHealthPointManipulator());
+        assertEquals(-1, meleeWeapon.getHealthPointManipulator());
     }
 }

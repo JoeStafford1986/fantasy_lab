@@ -15,4 +15,11 @@ public class Healer extends PlayerCharacter {
     public void addHealingToolInventory(HealingTool healingTool) {
         this.healingToolInventory.add(healingTool);
     }
+
+    public void manipulateHeathPoints(PlayerCharacter target) {
+        Item equippedItem = this.healingToolInventory.get(0);
+        int healthPointManipulationInt = equippedItem.getHealthPointManipulator();
+        int targetsHealth = target.getHealthPoints();
+        target.setHealthPoints(targetsHealth + healthPointManipulationInt);
+    }
 }

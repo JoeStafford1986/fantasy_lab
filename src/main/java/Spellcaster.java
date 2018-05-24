@@ -25,4 +25,8 @@ public class Spellcaster extends PlayerCharacter{
     public void addFamiliarToFamiliarInventory(Familiar familiar) {
         this.familiarInventory.add(familiar);
     }
+
+    public void manipulateHeathPoints(PlayerCharacter target) {
+
+    }
 }

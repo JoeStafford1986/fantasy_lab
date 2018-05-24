@@ -1,4 +1,4 @@
-public class PlayerCharacter {
+public abstract class PlayerCharacter implements IManipulateHealthPoints {
     private int healthPoints;
 
     public PlayerCharacter(int healthPoints) {

@@ -15,4 +15,11 @@ public class Fighter extends PlayerCharacter{
     public void addMeleeWeapontoInventory(MeleeWeapon meleeWeapon) {
         this.meleeWeaponInventory.add(meleeWeapon);
     }
+
+    public void manipulateHeathPoints(PlayerCharacter target) {
+        Item equippedItem = this.meleeWeaponInventory.get(0);
+        int healthPointManipulationInt = equippedItem.getHealthPointManipulator();
+        int targetsHealth = target.getHealthPoints();
+        target.setHealthPoints(targetsHealth + healthPointManipulationInt);
+    }
 }
