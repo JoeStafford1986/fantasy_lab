@@ -8,5 +8,9 @@ public class PlayerCharacter {
     public int getHealthPoints(){
         return this.healthPoints;
     }
+
+    public void setHealthPoints(int newHealthPoints){
+        this.healthPoints = newHealthPoints;
+    }
 }
 

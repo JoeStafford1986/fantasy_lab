@@ -16,4 +16,10 @@ public class PlayerCharacterTest {
     public void hasHealthPoints(){
         assertEquals(10, playerCharacter.getHealthPoints());
     }
+
+    @Test
+    public void canSetHealthPoints(){
+        playerCharacter.setHealthPoints(20);
+        assertEquals(20, playerCharacter.getHealthPoints());
+    }
 }
